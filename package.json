@@ -1,0 +1,27 @@
+{
+  "name": "crampon",
+  "version": "0.1.1",
+  "description": "Hierarchical configuration, made easy.",
+  "keywords": [
+    "config",
+    "configuration"
+  ],
+  "author": "Matt Dunlap <mpdunlap@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Prestaul/crampon.git"
+  },
+  "readmeFilename": "README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.test.js"
+  },
+  "dependencies": {
+    "lodash": "~1.3.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "chai": "~1.6.0"
+  }
+}
