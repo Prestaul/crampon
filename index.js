@@ -13,7 +13,7 @@ var Crampon = module.exports = function(hierarchy) {
 			if(!suppressErrors) throw e;
 		}
 
-		return config;
+		return config||{};
 	}
 
 	function appendHierarchical(conf) {
