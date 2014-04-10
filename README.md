@@ -102,3 +102,30 @@ assert.deepEqual(config, {
     debugLevel: 1
 });
 ```
+
+### Arrays
+As of version 0.2, arrays in configuration are replaced, rather than merged.
+
+```js
+var crampon = new Crampon().add({
+        favoriteColor: 'pink',
+        otherColors: [
+            'blue',
+            'red'
+        ]
+    })
+    .add({
+        otherColors: [
+            'green',
+            'black'
+        ]
+    });
+
+assert.deepEqual(crampon.getConfig(), {
+    favoriteColor: 'pink',
+    otherColors: [
+        'green',
+        'black'
+    ]
+});
+```

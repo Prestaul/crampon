@@ -1,4 +1,4 @@
-var _ = require('lodash');
+var deap = require('deap');
 
 var Crampon = module.exports = function(hierarchy) {
 	var configs = [],
@@ -17,13 +17,13 @@ var Crampon = module.exports = function(hierarchy) {
 	}
 
 	function appendHierarchical(conf) {
-		configs.push(_.cloneDeep(conf));
+		configs.push(deap.clone(conf));
 		return this;
 	}
 
 	function append(conf) {
 		configs.push({
-			'*': _.cloneDeep(conf)
+			'*': deap.clone(conf)
 		});
 		return this;
 	}
@@ -66,12 +66,12 @@ var Crampon = module.exports = function(hierarchy) {
 		if(hasHierarchy) {
 			do {
 				appendEnvironmentConfig(objects, hierarchy[i]);
-			} while(hierarchy[i] !== env && ++i < hierarchy.length)
+			} while(hierarchy[i] !== env && ++i < hierarchy.length);
 		}
 
 		appendEnvironmentConfig(objects, '*');
 
-		_.merge.apply(_, objects);
+		deap.apply(deap, objects);
 
 		return config;
 	}

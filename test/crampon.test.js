@@ -100,7 +100,6 @@ describe('crampon', function() {
 					list: [{
 						order: 'uno'
 					}, {
-						order: 'two',
 						position: 'two'
 					}]
 				},
@@ -121,9 +120,7 @@ describe('crampon', function() {
 					},
 					list: [{
 						order: 'uno',
-						position: 'one'
 					}, {
-						order: 'two',
 						position: 'two'
 					}]
 				},
@@ -227,7 +224,7 @@ describe('crampon', function() {
 						boo: 'far',
 						too: 'far'
 					}
-				}
+				},
 				crampon = new Crampon(hierarchy).addOverride(configA).addOverride(configB);
 
 			assert.deepEqual(crampon.getConfig('dev'), target);
