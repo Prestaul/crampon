@@ -148,6 +148,16 @@ describe('crampon', function() {
 			});
 		});
 
+		it('should not error out when adding a non-existant file and calling getConfig()', function() {
+				var crampon = new Crampon();
+
+				assert.doesNotThrow(function() {
+					crampon
+						.addFile('badfile', true)
+						.getConfig();
+				});
+		});
+
 	});
 
 	describe('with hierarchy', function() {
@@ -349,6 +359,16 @@ describe('crampon', function() {
 			assert.doesNotThrow(function() {
 				crampon.addOverrideFile('badfile', true);
 			});
+		});
+
+		it('should not error out when adding a non-existant file and calling getConfig()', function() {
+				var crampon = new Crampon(hierarchy);
+
+				assert.doesNotThrow(function() {
+					crampon
+						.addOverrideFile('badfile', true)
+						.getConfig('dev');
+				});
 		});
 
 	});
