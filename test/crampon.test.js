@@ -227,7 +227,7 @@ describe('crampon', function() {
 						boo: 'far',
 						too: 'far'
 					}
-				}
+				},
 				crampon = new Crampon(hierarchy).addOverride(configA).addOverride(configB);
 
 			assert.deepEqual(crampon.getConfig('dev'), target);
