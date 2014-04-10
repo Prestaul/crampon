@@ -4,7 +4,10 @@
   "description": "Hierarchical configuration, made easy.",
   "keywords": [
     "config",
-    "configuration"
+    "configuration",
+    "environment",
+    "hierarchy",
+    "settings"
   ],
   "author": "Matt Dunlap <mpdunlap@gmail.com>",
   "license": "MIT",
