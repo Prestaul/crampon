@@ -47,6 +47,8 @@ var Crampon = module.exports = function(hierarchy) {
 	}
 
 	function build(env) {
+		if(!env) env = process.env.NODE_ENV;
+
 		if(hasHierarchy && !env) {
 			throw new Error('You must specify an environment for getConfig when hierarchy is set.');
 		}

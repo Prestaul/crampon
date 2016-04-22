@@ -69,6 +69,8 @@ var crampon = new Crampon(['prod', 'test', 'dev']).add({
 // Get the dev configuration
 var config = crampon.getConfig('dev');
 
+// Note that the environment param defaults to the NODE_ENV environment variable
+
 assert.deepEqual(config, {
     root: '/home/apps/ftknox',
     db: {
