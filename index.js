@@ -8,7 +8,7 @@ var Crampon = module.exports = function(hierarchy) {
 		var config;
 
 		try {
-			config =require(file);
+			config = module.parent.require(file);
 		}catch(e) {
 			if(!suppressErrors) throw e;
 		}

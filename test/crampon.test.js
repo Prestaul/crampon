@@ -1,11 +1,10 @@
 var assert = require('chai').assert,
-	path = require('path'),
 	Crampon = require('../index');
 
-var FILE_1 = path.join(__dirname, 'sample.1.js'),
-	FILE_2 = path.join(__dirname, 'sample.2.js'),
-	FILE_HIERARCHICAL_1 = path.join(__dirname, 'sample.hierarchical.1.js'),
-	FILE_HIERARCHICAL_2 = path.join(__dirname, 'sample.hierarchical.2.js');
+var FILE_1 = './sample.1.js',
+	FILE_2 = './sample.2.js',
+	FILE_HIERARCHICAL_1 = './sample.hierarchical.1.js',
+	FILE_HIERARCHICAL_2 = './sample.hierarchical.2.js';
 
 describe('crampon', function() {
 	describe('without hierarchy', function() {
