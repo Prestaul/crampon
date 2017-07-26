@@ -55,7 +55,7 @@ var crampon = new Crampon(['prod', 'test', 'dev']).add({
         },
         debugLevel: 3
     },
-    stage: {
+    test: {
         debugLevel: 2
     },
     dev: {
